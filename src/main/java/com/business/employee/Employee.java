@@ -31,17 +31,21 @@ public class Employee {
     private String midname;
     private String surname;
     private String position;
+    private String phoneNumber;
+    private String imageUrl;
     private LocalDate startDate;
 
     @Transient
     private String workedTime;
 
-    public Employee(String email, String name, String midname, String surname, String position, LocalDate startDate) {
+    public Employee(String email, String name, String midname, String surname, String position, String phoneNumber, String imageUrl, LocalDate startDate) {
         this.email = email;
         this.name = name;
         this.midname = midname;
         this.surname = surname;
         this.position = position;
+        this.phoneNumber = phoneNumber;
+        this.imageUrl = imageUrl;
         this.startDate = startDate;
     }
 

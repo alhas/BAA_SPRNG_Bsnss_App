@@ -20,15 +20,19 @@ public class EmployeeConfig {
                     "Ali",
                     "ALHAS",
                     "FullStack Developler",
+                    "555 444 214",
+                    "https://avatars.githubusercontent.com/u/34629971?s=400&u=cdc33eb3bc2f993a2fa0bbc030acf4047a15ab10&v=4",
                     LocalDate.of(2020, Month.FEBRUARY, 28)
             );
 
             Employee hakan = new Employee(
                     "hakan@outlook.com",
                     "Hakan",
-                    "",
+                    null,
                     "Zaralioglu",
                     "Logisticci",
+                    "562 232 123",
+                    "https://cutt.ly/Jlfqzlm",
                     LocalDate.of(2020, Month.JANUARY, 10)
             );
 

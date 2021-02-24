@@ -36,23 +36,25 @@ public class EmployeeService {
 
     }
 
-    public void updateEmployee(Long emoployeeId, Employee employee) {
+    public void updateEmployee(Long employeeId, Employee employee) {
 
-        boolean chekId = employeeRepository.existsById(emoployeeId);
+        boolean chekId = employeeRepository.existsById(employeeId);
         if (!chekId) {
             throw new IllegalStateException("There is no employee with this id.");
         }
 
-        employeeRepository.findById(emoployeeId).map(newData -> {
+        employeeRepository.findById(employeeId).map(newData -> {
             newData.setEmail(employee.getEmail());
             newData.setName(employee.getName());
             newData.setMidname(employee.getMidname());
             newData.setSurname(employee.getSurname());
             newData.setPosition(employee.getPosition());
+            newData.setPhoneNumber(employee.getPhoneNumber());
+            newData.setImageUrl(employee.getImageUrl());
             newData.setStartDate(employee.getStartDate());
             return employeeRepository.save(newData);
         }).orElseGet((() -> {
-            employee.setId(emoployeeId);
+            employee.setId(employeeId);
             return employeeRepository.save(employee);
         }));
 
